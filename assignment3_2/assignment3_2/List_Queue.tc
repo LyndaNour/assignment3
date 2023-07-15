@@ -1,0 +1,47 @@
+#ifndef LIST_QUEUE_TC_
+#define LIST_QUEUE_TC_
+
+
+/**construct an empty queue */
+template<typename Item_Type>
+queue<Item_Type>::queue() {};
+
+/** pushes an item onto the back of the queue
+@param item The item to be inserted
+template<typename Item_Type>
+void queue<Item_Type>::push(const Item_Type& item)
+{
+container.push_back(item);
+}
+
+
+/** returns a reference to the object at the fornt of the queue without removing it 
+template<typename Item_Type>
+Item_Type& queue<Item_Type>::front()
+{
+container.front();
+}
+
+/** removes the front item from the queue
+template<typename Item_Type> 
+void queue<Item_Type>::pop()
+{
+cout<< container.pop_front()<<" removed from the queue"<<endl;
+}
+
+/** determines whether the queue is empty
+template<typename Item_Type>
+bool queue<Item_Type>::empty() const
+{
+return container.empty();
+}
+
+/** returns the number of items in the queue
+template<typename Item_Type>
+size_t queue<Item_Type>::size() const
+{
+return container.size();
+}
+
+
+#endif
